@@ -22,7 +22,7 @@ def click_login_button():
     ''' 
     TODO: 透過 XPath 找到登入按鈕，並點擊
     '''
-
+    
     loginButtonXPATH = '//button[text()="登入"]'
     loginButton = Wait.until(EC.presence_of_element_located((By.XPATH, loginButtonXPATH)), "Find Login Button Error")
     originalURL = driver.current_url
