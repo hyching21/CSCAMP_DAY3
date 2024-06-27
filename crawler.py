@@ -12,11 +12,17 @@ url = "http://cstix.nctucsunion.me/"
 
 # -------------- Step 1: 前置 --------------
 def init_driver():
-    # 開啟 Chrome 瀏覽器
+    
     global driver
     global Wait
+    
+    # 開啟 Chrome 瀏覽器
     driver = webdriver.Chrome()
+    
+    # 創造一個 WebDriverWait 物件，等待時間設定為 5 秒
     Wait = WebDriverWait(driver, 5)
+    
+    # 連結到指定網址
     driver.get(url)
 
 
