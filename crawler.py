@@ -3,8 +3,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from SolveTask import solve_task
 import time
+from SolveTask import solve_task
+
 
 url = "http://cstix.nctucsunion.me/"
 
