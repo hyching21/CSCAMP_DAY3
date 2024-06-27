@@ -9,7 +9,8 @@ from SolveTask import solve_task
 
 url = "http://cstix.nctucsunion.me/"
 
-# -------------- Step 1: 前置作業 -------------- 
+
+# -------------- Step 1: 前置 --------------
 def init_driver():
     # 開啟 Chrome 瀏覽器
     global driver
@@ -19,6 +20,7 @@ def init_driver():
     driver.get(url)
 
 
+# -------------- Step 2: 登入 --------------
 def click_login_button():
     ''' 
     TODO: 透過 XPath 找到登入按鈕，並點擊
@@ -65,8 +67,9 @@ def click_sign_in_button():
     signInButton.click() # 點擊"Sign in"按鈕
     Wait.until(EC.url_changes(originalURL), "Not going to myticket page") #確認有重導向到我的票券頁面
     time.sleep(1.5)
-    
 
+
+# -------------- Step 3: 購票 --------------
 def go_to_home_page():
     '''
     回到首頁
@@ -102,6 +105,8 @@ def click_next_step_button():
     Wait.until(EC.url_changes(originalURL), "Not going to next step (problem page)")
     time.sleep(1.5)
 
+
+# -------------- Step 4: 解題 --------------
 def fill_in_answer():
     '''
     TODO: 透過 XPath 找到輸入值數字，並填入答案
@@ -170,7 +175,7 @@ def solve_problem():
 
 if __name__ == '__main__':
 
-    # -------------- Step 1: 前置作業 --------------
+    # -------------- Step 1: 前置 --------------
     init_driver()
 
     # -------------- Step 2: 登入 --------------
