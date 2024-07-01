@@ -85,7 +85,7 @@ def click_sign_in_button():
     time.sleep(1.5)
 
 
-# -------------- Step 3: 購票 --------------
+# -------------- Step 3: 投票 --------------
 def go_to_home_page():
     '''
     回到首頁
@@ -197,7 +197,7 @@ if __name__ == '__main__':
     fill_in_info()
     click_sign_in_button()
 
-    # -------------- Step 3: 購票 --------------
+    # -------------- Step 3: 投票 --------------
     go_to_home_page()
     click_vote_button()
     click_next_step_button()
