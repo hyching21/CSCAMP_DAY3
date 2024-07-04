@@ -130,8 +130,8 @@ def fill_in_answer():
     raise NotImplementedError("還沒找到輸入值數字") 
     inputNumXPATH = '___(?)___'
     inputBox = Wait.until(EC.presence_of_element_located((By.XPATH, inputNumXPATH)), "Error finding input box")
-    # Hint: inputBox.text + 字串處理 split
-    inputNum = int("___(?)___")
+    # inputBox.text + 字串處理 split
+    inputNum = int(inputBox.text.split('\n')[1])
 
     raise NotImplementedError("還沒找到答案輸入框位置") 
     answerBoardXPATH = '___(?)___'
@@ -166,15 +166,15 @@ def solve_problem():
     raise NotImplementedError("還沒破解挑戰賽 加油") 
     problemTitleXPATH = '___(?)___'
     problemTitle = Wait.until(EC.presence_of_element_located((By.XPATH, problemTitleXPATH)), "Error finding problem-title")
-    # Hint: problemTitle.text + 字串處理 split
-    problemID = '_______(?)_______'
+    # problemTitle.text + 字串處理 split
+    problemID = problemTitle.text.split(' ')[1]
     problemID = int(problemID)
 
     # 以下 XPATH 和 fill_in_answer() 相同，但有部分需做修改
     inputNumXPATH = '___(?)___'
     inputBox = Wait.until(EC.presence_of_element_located((By.XPATH, inputNumXPATH)), "Error finding input box")
-    # Hint: inputBox.text + 字串處理 split
-    inputNum = int("___(?)___")
+    # inputBox.text + 字串處理 split
+    inputNum = int(inputBox.text.split('\n')[1])
     
 
     answer = solve_task("___(?)___", inputNum)

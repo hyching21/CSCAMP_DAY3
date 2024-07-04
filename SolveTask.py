@@ -18,37 +18,37 @@ def solve_task0(number):
     return number 
 
 
-def solve_task1(number):   # square
+def solve_task1(number):   # echo square
     
     ans = ''
     return ans
 
 
-def solve_task2(number):   # star
+def solve_task2(number):   # series
     
     ans = ''
     return ans
 
 
-def solve_task3(number):   # FIB
+def solve_task3(number):   # apple
      
     ans = ''
     return ans
 
 
-def solve_task4(number):   # identity matrix
+def solve_task4(number):   # star
    
     ans = ''
     return ans
 
 
-def solve_task5(number):   # recursive
+def solve_task5(number):   # star advanced
     
     ans = ''
     return ans
 
 
-def solve_task6(number):  # easy problem
+def solve_task6(number):  # FIB
 
     ans = ''
     return ans
